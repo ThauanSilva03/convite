@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+    #container{
+        text-align: center;
+    }
+    body{
+        background-color: rgb(54, 54, 68);
+    }
+    button{
+        width: 5em;
+        height: 3em;
+        font-size: 20px;
+        border-radius: 50px;
+        border: none;
+        background-color: rgb(228, 31, 152);
+        color: white;
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0 15px;
+        
+    }
+    button a{
+        text-decoration: none;
+        color: white;
+    }
+    h1{
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        color: white;
+    }
+</style>
+<body>
+    
+    <div id="container">
+        <h1>Com esse seu sorriso, é Impossível não existir amor à primeira vista</h1><br>
+        <h1>Aceita sair comigo?</h1><br>
+        <h1>Local: Oscar Hotel</h1>
+        <h1>Dia: 08/06 às 16h</h1><br>
+        <h1>Vantagens: sair</h1>
+        <h1>Desvantagens: comigo</h1>
+        <button id="sim" ><a onclick="sim()" href="https://www.youtube.com/shorts/WEX5FBBkTwA?feature=share">sim</a></button>
+        
+        
+        <button id="nao" onclick="desviar(this)" onmouseover="desviar(this)">não</button>
+    </div>
+</body>
+<script>
+    function desviar(t){
+        var btn = t;
+        btn.style.position = 'absolute';
+        btn.style.bottom = newPosition(20, 90);
+        btn.style.left = newPosition(20, 80);
+    }
+    function newPosition(min, max){
+        return (Math.random() * (max - min) + min) + "%";
+    }
+    function sim(){
+        window.alert("Parabéns você aceitou sair comigo 🥳🥳");
+    }
+</script>
+</html>
